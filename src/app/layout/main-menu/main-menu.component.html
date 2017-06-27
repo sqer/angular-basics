@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="defaultLink.value">{{title}}</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a [routerLink]="defaultLink.value" routerLinkActive="active">{{defaultLink.text}}</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>

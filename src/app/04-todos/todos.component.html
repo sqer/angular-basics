@@ -1,0 +1,8 @@
+<h3>Todos list</h3>
+<div class="panel">
+  <h3>TODOs</h3>
+
+  <todos-list [underEditTodos]="currentlyEditedTodos" (removeClick)="remove($event)" (editClick)="edit($event)"
+    (cancelEditClick)="cancelEdit($event)"> &gt; </todos-list>
+    <todo-form (submitClick)="createNew($event)"></todo-form>
+</div>

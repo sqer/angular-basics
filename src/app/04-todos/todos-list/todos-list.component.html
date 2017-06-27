@@ -1,0 +1,16 @@
+<ol class="todo-list">
+  <li *ngFor="let item of todos">
+    <div  class="todo-item">
+      <strong class="title">
+        <input [(ngModel)]="item.isFinished" type="checkbox"/>
+       {{item.id}} {{item.title}}
+      </strong>
+      <div class="desc">{{item.description}}</div>
+      <button (click)="edit(item)">Edit</button>
+      <button (click)="remove(item)">Remove</button>
+          <edit-todo *ngIf="isEdited(item)" [todo]="item" (updateClick)="update($event)" (cancelClick)="cancel($event)"></edit-todo>
+    </div>
+  </li>
+</ol>
+
+

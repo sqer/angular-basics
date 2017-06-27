@@ -1,0 +1,16 @@
+<div class="interactive-personal-data">
+  <div class="input-group">
+    <span class="input-group-addon">Name: {{person.name}}</span>
+    <input #namediv (keyup)="setName($event.target.value)" [value]="person.name" type="text" class="form-control"/>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Age: {{person.age}}</span>
+  </div>
+  <div class="input-group">
+    <output>{{person.image.url}}</output>
+  </div>
+  <div>
+    <img [src]="person.image.url" />
+    <img/>
+  </div>
+</div>

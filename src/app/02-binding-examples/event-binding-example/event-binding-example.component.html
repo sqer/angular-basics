@@ -1,0 +1,26 @@
+<h3>Event Binding Examples</h3>
+<div>
+    <h5>1. Log Click</h5>
+    <button (click)="logClick()">Log click</button>
+</div>
+<hr/>
+<div>
+    <h5>2. Show message</h5>
+    <button>Show message</button>
+    <p>{{clickMsg}}</p>
+</div>
+<hr/>
+<div>
+    <h5>3. Log name</h5>
+    <input (keyup)="logName($event)" />
+</div>
+<hr/>
+<div>
+    <h5>4. Change name</h5>
+    <input />
+    <p> <label>Name: {{name}}</label></p>
+</div>
+
+
+
+    
