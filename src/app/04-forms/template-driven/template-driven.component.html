@@ -1,0 +1,33 @@
+<form #sForm="ngForm" (ngSubmit)="sForm.form.valid && onSubmit()">
+    <div class="form-group">
+        <label class="control-label">Are you familiar with typescript?</label>
+        <input type="radio" name="typescript" [(ngModel)]="survey.typescript" [value]="0" required />
+        <input type="radio" name="typescript" [(ngModel)]="survey.typescript" [value]="1" required />
+        <input type="radio" name="typescript" [(ngModel)]="survey.typescript" [value]="2" required/>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Are you familiar with angular?</label>
+        <input type="checkbox" name="angular" [(ngModel)]="survey.angular" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">What is your preferred programming language?</label>
+        <select class="form-control" name="preferredLanguage" [(ngModel)]="survey.preferredLanguage">
+            <option>Java</option>
+            <option>C++</option>
+            <option>C#</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Put comment here</label>
+        <textarea class="form-control" name="comment" [(ngModel)]="survey.comment"></textarea>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form>
+
+<div *ngIf="sForm.submitted && sForm.form.valid">
+    <h1>Form data</h1>
+    <p>Typescript: {{survey.typescript}}</p>
+    <p>Angular: {{survey.angular}}</p>
+    <p>Preferred Language: {{survey.preferredLanguage}}</p>
+    <p>Comment: {{survey.comment}}</p>
+</div>

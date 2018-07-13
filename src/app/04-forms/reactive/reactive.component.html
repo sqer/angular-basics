@@ -1,0 +1,33 @@
+<form [formGroup]="surveyGroup" (ngSubmit)="surveyGroup.status === 'VALID' && onSubmit()">
+    <div class="form-group">
+        <label class="control-label">Are you familiar with typescript?</label>
+        <input type="radio" name="typescript" formControlName="typescript" [value]="0" />
+        <input type="radio" name="typescript" formControlName="typescript" [value]="1" />
+        <input type="radio" name="typescript" formControlName="typescript" [value]="2" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Are you familiar with angular?</label>
+        <input type="checkbox" name="angular" formControlName="angular" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">What is your preferred programming language?</label>
+        <select class="form-control" name="preferredLanguage" formControlName="preferredLanguage">
+            <option>Java</option>
+            <option>C++</option>
+            <option>C#</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Put comment here</label>
+        <textarea class="form-control" name="comment" formControlName="comment"></textarea>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form>
+
+<div *ngIf="survey">
+    <h1>Form data</h1>
+    <p>Typescript: {{survey.typescript}}</p>
+    <p>Angular: {{survey.angular}}</p>
+    <p>Preferred Language: {{survey.preferredLanguage}}</p>
+    <p>Comment: {{survey.comment}}</p>
+</div>
