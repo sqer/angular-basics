@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Survey } from '../survey';
-import { NgForm } from '../../../../node_modules/@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'template-driven-form',

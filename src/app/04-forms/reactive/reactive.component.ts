@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Survey } from '../survey';
-import { NgForm, FormControl, FormGroup, FormBuilder, Validators } from '../../../../node_modules/@angular/forms';
+import { NgForm, FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
     selector: 'reactive-form',
