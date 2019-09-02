@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Person } from "../shared/person";
+import { Person } from '../shared/person';
 
 @Component({
   selector: 'child',
@@ -18,7 +18,7 @@ export class ChildComponent {
   }
 
   nameBtnClick() {
-    let person: Person = {
+    const person: Person = {
       name: this.firstName,
       age: Math.random() * 12
     };

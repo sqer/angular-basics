@@ -11,16 +11,16 @@ export class ParentComponent implements OnInit {
   parentNumbers: number[];
 
   ngOnInit(): void {
-    this.childrenNames = ["Hyzio", "Dyzio", "Zyzio"];
+    this.childrenNames = ['Hyzio', 'Dyzio', 'Zyzio'];
     this.parentNumbers = [34, 13, 41, 1, 24, 32];
   }
 
   chooseNumber(name: string, chosenNumber: number) {
-    console.log("Parent received, child name:", name, " chosen number:", chosenNumber);
+    console.log('Parent received, child name:', name, ' chosen number:', chosenNumber);
   }
 
   logTick(event: Person) {
-    console.log("Parent. Timer data", event);
+    console.log('Parent. Timer data', event);
   }
 
 }

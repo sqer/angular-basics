@@ -1,27 +1,25 @@
 import { NgModule } from '@angular/core';
-
 //components
-import { BFirstComponent } from "./b-first/b-first.component";
-import { BSecondComponent } from "./b-second/b-second.component";
+import { BFirstComponent } from './b-first/b-first.component';
+import { BSecondComponent } from './b-second/b-second.component';
 // services
-import { B1Service } from "./shared/b1.service";
-import { B2Service } from "./shared/b2.service";
-import { AlphaService } from '../shared/alpha.service';
+import { B1Service } from './shared/b1.service';
+import { B2Service } from './shared/b2.service';
 
 @NgModule({
   imports: [],
   exports: [
     BFirstComponent,
-    BSecondComponent,
+    BSecondComponent
   ],
   declarations: [
     BFirstComponent,
-    BSecondComponent,
+    BSecondComponent
   ],
   providers: [
     B1Service,
     B2Service
-  ],
+  ]
 })
 export class BFeatureModule {
 }

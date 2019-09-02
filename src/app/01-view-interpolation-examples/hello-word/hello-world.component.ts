@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 
 export class HelloWorldComponent {
 
-    name: string = "Tomasz";
+    name: string = 'Tomasz';
 
     constructor() { }
 

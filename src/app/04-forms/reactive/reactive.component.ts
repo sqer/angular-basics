@@ -1,36 +1,32 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Survey } from '../survey';
-import { NgForm, FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-    selector: 'reactive-form',
-    templateUrl: './reactive.component.html'
+  selector: 'reactive-form',
+  templateUrl: './reactive.component.html'
 })
 
 export class ReactiveFormComponent {
 
-    survey: Survey;
-    surveyGroup:FormGroup;
+  survey: Survey;
+  surveyGroup: FormGroup;
 
-    constructor(private fb:FormBuilder){
-        this.createForm();
-    }
+  constructor(private fb: FormBuilder) {
+    this.createForm();
+  }
 
+  createForm(): void {
+    this.surveyGroup = this.fb.group({
+      typescript: ['', Validators.required],
+      angular: '',
+      preferredLanguage: '',
+      comment: ''
+    });
+  }
 
-    createForm():void{
-        this.surveyGroup=this.fb.group({
-            typescript:['',Validators.required],
-            angular: "",
-            preferredLanguage:"",
-            comment:""
-        });
-
-    }
-
-  
-
-    onSubmit(): void {
-        this.survey= this.surveyGroup.value;
-    }
+  onSubmit(): void {
+    this.survey = this.surveyGroup.value;
+  }
 
 }

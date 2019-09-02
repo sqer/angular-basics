@@ -1,4 +1,4 @@
-import { Todo } from "./todo";
+import { Todo } from './todo';
 
 export enum TodoEditStatus {UPDATE, CANCEL, CREATE_NEW}
 

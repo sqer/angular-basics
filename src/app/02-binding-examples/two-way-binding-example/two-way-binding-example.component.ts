@@ -10,13 +10,13 @@ export class TwoWayBindingExampleComponent implements OnInit {
 
     ngOnInit(): void {
         this.types = [
-            "Private",
-            "Public",
-            "Top secret"
+            'Private',
+            'Public',
+            'Top secret'
         ];
 
         this.message = {
-            text: "Imba!",
+            text: 'Imba!',
             type: this.types[0]
         };
     }

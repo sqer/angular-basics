@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from "@angular/common";
-
+import { CommonModule } from '@angular/common';
 // sub-modules
-import { AFeatureModule } from "./a-feature/a-feature.module";
-import { BFeatureModule } from "./b-feature/b-feature.module";
+import { AFeatureModule } from './a-feature/a-feature.module';
+import { BFeatureModule } from './b-feature/b-feature.module';
+// components
+import { ModulesExamplesComponent } from './modules-examples.component';
+import { AlphaService } from './shared/alpha.service';
+import { BetaService } from './shared/beta.service';
+import { GammaService } from './shared/gamma.service';
+import { CFeatureModule } from './c-feature/c-feature.module';
 
-//components
-import { ModulesExamplesComponent } from "./modules-examples.component";
-import { AlphaService } from "./shared/alpha.service";
-import { BetaService } from "./shared/beta.service";
-import { GammaService } from "./shared/gamma.service";
-
-//services
+// services
 
 @NgModule({
   imports: [
@@ -19,18 +18,19 @@ import { GammaService } from "./shared/gamma.service";
     // sub-modules
     AFeatureModule,
     BFeatureModule,
+    CFeatureModule
   ],
   exports: [
-    ModulesExamplesComponent,
+    ModulesExamplesComponent
   ],
   declarations: [
-    ModulesExamplesComponent,
+    ModulesExamplesComponent
   ],
   providers: [
     AlphaService,
     BetaService,
-    GammaService,
-  ],
+    GammaService
+  ]
 })
 export class ModulesExamplesModule {
 }

@@ -11,9 +11,9 @@ export class PropertyBindingExampleComponent {
   url: string;
 
   constructor() {
-    this.bob = {name: "Uncle Bob", sex: "M"};
+    this.bob = {name: 'Uncle Bob', sex: 'M'};
     this.isBtnDisabled = true;
-    this.url = "http://braginteractive.com/wp-content/uploads/2015/12/meme-i-have-no-idea-what-i-am-doing.png"
+    this.url = 'http://braginteractive.com/wp-content/uploads/2015/12/meme-i-have-no-idea-what-i-am-doing.png'
   }
 
 }

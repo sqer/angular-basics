@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { ViewInterpolationComponent } from './view-interpolation.component';
 import { HelloWorldComponent } from './hello-word/hello-world.component';
 
-// TODO add imports
+// TODO add correct imports to files
+// TODO declare personal data component in module
 
-// TODO  make personal data component "visible" for module internals
 @NgModule({
   exports: [
     ViewInterpolationComponent

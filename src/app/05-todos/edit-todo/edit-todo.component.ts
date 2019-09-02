@@ -1,31 +1,26 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from '../shared/todo';
-import { TodosService } from '../shared/todos.service';
 
 @Component({
-    selector: 'edit-todo',
-    templateUrl: './edit-todo.component.html',
-    styleUrls: ['./edit-todo.component.scss']
+  selector: 'edit-todo',
+  templateUrl: './edit-todo.component.html',
+  styleUrls: ['./edit-todo.component.scss']
 })
 export class EditTodoComponent implements OnInit {
 
-    @Input() todo :Todo;
+  @Input() todo: Todo;
 
-    @Output() updateClick = new EventEmitter<any>();
-    @Output() cancelClick = new EventEmitter<any>();
+  @Output() updateClick = new EventEmitter<any>();
+  @Output() cancelClick = new EventEmitter<any>();
 
-    editedTodo:Todo;
+  editedTodo: Todo;
 
-    constructor(todoService: TodosService) {
-        //TODO inject TodosService
-    }
+  ngOnInit() {
+  }
 
-    ngOnInit() {
-    }
+  update() {
+  }
 
-    update() {
-    }
-
-    cancel(){
-    }
+  cancel() {
+  }
 }

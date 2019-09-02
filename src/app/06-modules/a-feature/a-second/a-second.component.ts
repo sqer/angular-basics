@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AlphaService } from '../../shared/alpha.service';
 
 @Component({
   selector: 'a-second',

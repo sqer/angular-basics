@@ -1,4 +1,4 @@
-import { Component,ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'interactive-personal-data',
@@ -6,18 +6,18 @@ import { Component,ViewChild } from '@angular/core';
 })
 export class InteractivePersonalDataComponent {
 
-  @ViewChild("namediv") namediv;
+  @ViewChild('namediv', { static: false }) namediv;
 
   person = {
-    name: "Tomasz",
+    name: 'Tomasz',
     age: 28,
     image: {
-      url: "http://braginteractive.com/wp-content/uploads/2015/12/meme-i-have-no-idea-what-i-am-doing.png"
+      url: 'http://braginteractive.com/wp-content/uploads/2015/12/meme-i-have-no-idea-what-i-am-doing.png'
     }
   };
 
-  setName(name:string){
-    this.person.name=name;
+  setName(name: string) {
+    this.person.name = name;
   }
 
 }
