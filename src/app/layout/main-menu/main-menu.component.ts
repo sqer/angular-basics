@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
   title: string = "Angular workshop";
-  defaultLink: Object = {value: '', text: 'Home'};
+  defaultLink = {value: '', text: 'Home'};
 
   ngOnInit() {
   }

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './two-way-binding-example.component.html'
 })
 export class TwoWayBindingExampleComponent implements OnInit {
-    message: any;
+    message: { text: string, type: string };
     types: string[];
 
     ngOnInit(): void {
