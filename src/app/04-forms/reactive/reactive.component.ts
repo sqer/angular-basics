@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Survey } from '../survey';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'reactive-form',
@@ -10,9 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ReactiveFormComponent {
 
   survey: Survey;
-  surveyGroup: FormGroup;
+  surveyGroup: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.createForm();
   }
 
